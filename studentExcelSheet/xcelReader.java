@@ -22,7 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
- * 
+ * taking inputs from two excel sheet and writing to third excel sheet 
  * @author yash.porwal_metacube
  *
  */
@@ -47,7 +47,12 @@ public class xcelReader {
 	}
 
 	/**
-	 * 
+	 * this method takes two input excel file - 
+	 * student data of their preferable courses (Student.xls) 
+	 * second one is college data of number of seats 
+	 * in a particular course (DSAAssign2.xls)
+	 * finally allot students to their respected courses and 
+	 * write this into new excel file of name "studentDataFinal"
 	 * @throws IOException
 	 * @throws Exception
 	 */
@@ -191,7 +196,8 @@ public class xcelReader {
 		FileOutputStream out1 = null;
 		try {
 			out1 = new FileOutputStream(
-					new File("C:\\Users\\yash.porwal_metacube\\workspace\\Data Structures - Session 2 - Assignments\\src\\excelSheet\\studentDatafinal.xlsx"));
+					new File
+					("C:\\Users\\yash.porwal_metacube\\workspace\\Data Structures - Session 2 - Assignments\\src\\excelSheet\\studentDatafinal.xlsx"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -199,7 +205,8 @@ public class xcelReader {
 
 		workbook.write(out1);
 		out1.close();
-		System.out.println("Writesheet.xlsx written successfully in C:\\Users\\yash.porwal_metacube\\workspace\\Data Structures - Session 2 - Assignments\\src\\excelSheet\\studentDatafinal.xlsx");
+		System.out.println("Writesheet.xlsx written successfully in "
+				+ "C:\\Users\\yash.porwal_metacube\\workspace\\Data Structures - Session 2 - Assignments\\src\\excelSheet\\studentDatafinal.xlsx");
 
 	}
 
