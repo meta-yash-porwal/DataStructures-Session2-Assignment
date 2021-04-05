@@ -22,6 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
+ * this class read excel files 
  * taking inputs from two excel sheet and writing to third excel sheet 
  * @author yash.porwal_metacube
  *
@@ -33,7 +34,7 @@ public class xcelReader {
 	Map<String, String> result = new HashMap<String, String>();
 
 	
-	public static void main(String... arg) {
+	public static void main(String[] args) {
 
 	xcelReader p = new xcelReader();
 		try {
